@@ -1,0 +1,63 @@
+/*Imports Product Sans as custom font*/
+@font-face {
+    font-family: Product;
+    src: url(/fonts/ProductSans-Regular.ttf);
+}
+/*Sets the default font and font color of the document*/
+html {
+    font-family: Product;
+    color: aliceblue;
+}
+/*Sets the background image*/
+body {
+}
+/*Sets image height and width*/
+img {
+    height: 4%;
+    width: 4%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.bg-imgs img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+    transition-delay: 2.5s;
+    transition: opacity 2.5s;
+}
+
+.topnav {
+    overflow: hidden;
+}
+/*Styling for navbar links*/
+.topnav a{
+    float: right;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition-property: font-size;
+    transition-duration: 450ms;
+}
+/*Increases font size upon hover*/
+.topnav a:hover {
+    color: black;
+    font-size: 21px;
+}
+
+header {
+    font-size: 30px;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
