@@ -1,46 +1,49 @@
 /*Imports Product Sans as custom font*/
 @font-face {
     font-family: Product;
-    src: url(/fonts/ProductSans-Regular.ttf);
+    src: url(/CrispinMcKie-Aerial/fonts/ProductSans-Regular.ttf);
 }
 /*Sets the default font and font color of the document*/
 html {
     font-family: Product;
     color: aliceblue;
 }
-/*Sets the background image*/
-body {
-}
 /*Sets image height and width*/
-img {
-    height: 4%;
-    width: 4%;
+.logo {
+    height: 8%;
+    position: fixed;
+    top: 2%;
+    left: 2%;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.bg-imgs img {
+#container {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    }
+    #container img {
     position: absolute;
-    z-index: -1;
-    height: 100%;
+    top: 0;
+    left: 0;
     width: 100%;
-    opacity: 0%;
-    transition-delay: 2.5s;
-    transition: opacity 2.5s;
-}
-
+    height: 100%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out infinite alternate;
+    }
+    @keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
 .topnav {
     overflow: hidden;
+    position: fixed;
+    top: 5%;
+    right: 0%;
 }
 /*Styling for navbar links*/
 .topnav a{
     float: right;
-    color: aliceblue;
+    color: #ced4da;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -50,12 +53,13 @@ img {
 }
 /*Increases font size upon hover*/
 .topnav a:hover {
-    color: black;
+    color: grey;
     font-size: 21px;
 }
 
 header {
     font-size: 30px;
+    color: #ced4da;
     position: fixed;
     top: 50%;
     width: 100%;
